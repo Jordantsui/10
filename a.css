@@ -1,0 +1,96 @@
+/*body{
+    background-color: grey;
+  }
+h1{
+    text-align: center; color:red;
+  }*/
+body{
+    background: black;
+    color:red;
+    margin:0;
+}
+/*margin:0取消body左边默认的边距，取消之后上面的边距margin也取消了，所以应该padding-top应该加上8px*/
+a{
+    color:inherit;
+}
+/*a的颜色继承祖先，即body*/
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.topNavBar{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+/*注意body左边的间距默认有margin，应先取消margin，再加padding-left*/
+/*这四句可用 padding:20px 16px 20px 16px;  代替（上右下左）*/
+.topNavBar>a{
+    float:left;
+    text-decoration: none;
+}
+.topNavBar>nav{
+    float:right;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+/*在这里，padding-top和bottom起到的是补间隙的作用，使导航条居中*/
+.topNavBar>nav>ul{
+    list-style: none; margin:0; padding: 0; 
+    /*border: 1px solid red;*/
+}
+/*>是一个选择器，表示儿子*/
+.topNavBar>nav>ul>li{
+    float:left; 
+    /*border:1px solid green;*/
+}
+/*margin-left和margin-right是根据QQ量两个项之间的间距获得的*/
+/*即是说两个li也是两个独立的框，之间的padding、margin都要算*/
+/*margin-left加在li上还是a上都可以*/
+.topNavBar>nav>ul>li>a{
+    font-size: 12px;
+    color: #B7B7B7;
+    text-decoration: none;
+    margin-left: 17px;
+    margin-right: 17px;
+    font-weight: bold;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+}
+/*在这里，视频里讲了一个细节，要查看现有的字体大小或颜色，可在Elements中选中该行代码-看旁边-styles-filter*/
+/*而且视频里用了一个取色软件*/
+/*td:n Tab 去掉下划线*/
+/*类似于td这样的，我们如果不知道取值，该怎么办？1、mdn去查；2、text-decoration:看调出来的可选取值，一个一个试*/
+/*font-weight:bold，加粗*/
+/*padding-top和bottom是控制导航条距上边和下边的距离，当然包括了橙色线距导航条的距离*/
+/*若li的高度小于a，则li没有将a包起来，此时可用display...*/
+.topNavBar>nav>ul>li>a:hover{
+    border-bottom: 3px solid #e06567;
+}
+/*hover定义的是鼠标停在导航条上时，导航条所起的变化。这里导航条下会出现一条橙色（？）的红线*/
+/*会防止抖动，所以我们定义没有鼠标悬停时，导航条下面也会有一条横线，只不过是透明的（transparent）*/
+/*border是指四周都有线，border-bottom是指仅下面有线*/
+/*线的高度3px是用QQ截出来的，鼠标一离开，线就消失了，如何截？styles-:hov-:hover，然后用截图工具*/
+/*线的颜色也是用QQ截出来的，然而我电脑上的QQ不行*/
+
+.topNavBar .logo{
+    font-size: 24px;
+    font-family: "Arial Black";
+    padding-top: 3px;
+    padding-bottom: 2px;
+}
+.topNavBar .logo .rs{
+    margin-right: 4px;
+    color:#E6686A;
+}
+/*"Fredoka One"这个字体文件我们没有，理论上可以从Network-font下载，但这次没讲*/
+/*因此我们选了一个较相似的来替代*/
+/*若在.topNavBar .logo中规定了font-size和family，则rs和card会自动继承*/
+.topNavBar .logo .card{
+    color: #9A9DA2;
+}

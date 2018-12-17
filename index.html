@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>我的简历</title>
+    <!--<style>
+      body{
+        background-color: grey;
+      }
+      h1{
+        text-align: center; color:red;
+      }
+    </style>-->
+    <!--style标签方法-->
+    <link rel="stylesheet" href="./a.css">
+    <!--rel表示该link与当前文档是什么关系，css就是一种stylesheet-->
+  </head>
+  <body>
+  <!--<body style="background-color: grey;">-->
+  <!--内联样式-->>
+    <hr />
+    <div class="topNavBar clearfix">
+      <!--<span class="logo">
+        <span class="rs">RS</span><span class="card">card</span>
+      </span>-->
+      <!--视频里用的是a标签，但是我感觉a标签是上一节课的残留，没必要，试验了div和span，事实证明：div标签是上下分格，不能用；而span标签是左右分格，可以用-->
+      <a class="logo" href="#" alt="logo">
+        <span class="rs">RS</span><span class="card">card</span>
+      </a>
+      <nav>
+        <ul class="clearfix">
+        <!--list-style这句话可以让列表中每个元素前的小圆点消失；margin、padding是指每个元素左边和上边的空隙，全部取消-->
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SKILLS</a></li>
+          <li><a href="#">EXPERIENCE</a></li>
+          <!--要想把竖排的变成横排，就要用float，之后肯定会有bug；然后再给他们的爸爸ul添加clearfix-->
+          <!--若都向左靠，则都用float:left，若一左一右，则一个left，一个right-->
+          <li><a href="#">PRICING</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">CALENDAR</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="#">OTHER</a></li>
+          <li><a href="#">ALL DEMOS</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="banner" style="background-image:url(#)"></div>
+    <main>
+      <div class="card">
+        <div class="picture">
+          <img src="" alt="头像">
+        </div>
+        <div class="text">
+	  <div class="profile">
+            <span class="welcome">Hello</span>
+      <h1>罗旷</h1>
+      <!--<h1 style="text-align: center; color:red;">罗旷</h1>-->
+      <!--这是css的内联样式（把样式写在标签上）-->
+	    <p>我儿子</p>
+	    <hr>
+	    <dl>
+	      <dt>年龄</dt>
+	      <!--description term-->
+	      <dd>22</dd>
+	      <!--description definition-->
+	      <dt>学历</dt>
+  	      <!--description term-->
+	      <dd>bluefly</dd>
+	      <!--description definition-->
+	    </dl>
+	  </div>
+	  <footer class="media">
+            <a href="#"><img src="#" alt="..."></a>
+            <a href="#"><img src="#" alt="..."></a>
+            <a href="#"><img src="#" alt="..."></a>
+            <a href="#"><img src="#" alt="..."></a>
+            <a href="#"><img src="#" alt="..."></a>
+            <a href="#"><img src="#" alt="..."></a>
+            <a href="#"><img src="#" alt="..."></a>
+	  </footer>
+	</div>
+      </div>
+      <a class="button" href="#">下载PDF简历</a>
+      <p>
+        哈哈<br>
+	haha
+      </p>
+    </main>
+    <section>
+      <h2>技能</h2>
+      <ol>
+        <li>HTML 5 &amp; CSS 3</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>Vue</li>
+        <li>React</li>
+        <li>HTTP</li>
+      </ol>
+    </section>
+    <section>
+      <h2>作品集</h2>
+      <nav>
+        <ol>
+          <li>所有</li>
+          <li>框架</li>
+          <li>原生JS&amp;CSS</li>
+        </ol>
+      </nav>
+
+      <div class="jobs">
+        <div class="big"></div>
+        <div class="small"></div>
+        <div class="small"></div>
+      </div>
+
+    </section>
+  </body>
+</html>
